@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Riesling';
+    src: url('assets/fonts/riesling-webfont.eot');
+    src: url('assets/fonts/riesling-webfont.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/riesling-webfont.woff') format('woff'),
+         url('assets/fonts/riesling-webfont.ttf') format('truetype'),
+         url('assets/fonts/riesling-webfont.svg#RieslingRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$grey: #58575c;
+$orange: #d47820;
+$green: #a2c111;
+
+h1{
+	font-family: 'Riesling';
+	font-size: 100px;
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	margin: 0;
+}
+
+a.nav {
+	display: block;
+	color: black;
+	font-family: 'Riesling';
+	font-size: 48px;
+	text-align: center;
+	text-decoration: none;
+	padding-top: 525px;
+	
+	&:hover {
+		color: $orange;
+	}
+}
+
+a.sub {
+	color: $grey;
+	display: block;
+	text-align: right;
+	font-size: 12px;
+	padding-right: 20px;
+}
+
+body {
+	background-color: $grey;
+	background-image: url('assets/styling/bg-dark.jpg');
+	background-position-x: center;
+	background-repeat: no-repeat;
+}
+
+.content {
+	width: 960px;
+	margin: 0px auto;
+}
+
+ul#front_nav {
+	list-style: none;
+	padding: 0;
+	margin-top: -45px;
+	
+	li {
+		width: 180px;
+		height: 600px;
+		margin: 5px;
+		display: block;
+		float: left;
+		background-repeat: no-repeat;
+		opacity: 0.5;
+		
+		&:hover {
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-ms-transition: all 2s ease;
+			-o-transition: all 2s ease;
+			transition: all 2s ease;
+			opacity: 1;
+		}
+		
+		&:first-child, &:nth-child(4) {
+			border: solid 0 $green;
+			border-bottom-width: 5px;
+		}
+		
+		&:last-child, &:nth-child(2) {
+			border: solid 0 $orange;
+			border-bottom-width: 5px;
+		}
+		
+		&#blog {
+			background-image: url('assets/images/front-blog.png');
+		}
+		&#art {
+			background-image: url('assets/images/front-art.png');
+		}
+		&#center {
+			background-image: url('assets/styling/insignia.png');
+			background-position: bottom;
+			opacity: 1;
+		}
+		&#code {
+			background-image: url('assets/images/front-code.png');
+		}
+		&#about {
+			background-image: url('assets/images/front-about.png');
+		}
+	}
+}
