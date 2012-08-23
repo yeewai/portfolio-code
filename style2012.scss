@@ -10,9 +10,19 @@
 
 }
 
+@mixin fade{
+	-webkit-transition: all 2s ease;
+	-moz-transition: all 2s ease;
+	-ms-transition: all 2s ease;
+	-o-transition: all 2s ease;
+	transition: all 2s ease;
+}
+
 $grey: #58575c;
+$dark_grey: #2e2e2e;
 $orange: #d47820;
 $green: #a2c111;
+$trans_white: rgba(255, 255, 255, .25);
 
 h1{
 	font-family: 'Riesling';
@@ -25,7 +35,7 @@ h1{
 
 a.nav {
 	display: block;
-	color: black;
+	color: $dark_grey;
 	font-family: 'Riesling';
 	font-size: 48px;
 	text-align: center;
@@ -38,11 +48,22 @@ a.nav {
 }
 
 a.sub {
-	color: $grey;
+	color: $dark_grey;
 	display: block;
+	font-family: arial;
 	text-align: right;
 	font-size: 12px;
-	padding-right: 20px;
+	
+	&:hover {
+		color: $green;
+	}
+	
+	&:after {
+		content: url('assets/styling/slug-dark_grey.png');
+		padding-left: 1px;
+		position: relative;
+		top: 4px;
+	}
 }
 
 body {
@@ -70,23 +91,20 @@ ul#front_nav {
 		float: left;
 		background-repeat: no-repeat;
 		opacity: 0.5;
+		@include fade;
 		
 		&:hover {
-			-webkit-transition: all 2s ease;
-			-moz-transition: all 2s ease;
-			-ms-transition: all 2s ease;
-			-o-transition: all 2s ease;
-			transition: all 2s ease;
+			@include fade;
 			opacity: 1;
 		}
 		
-		&:first-child, &:nth-child(4) {
-			border: solid 0 $green;
+		&:first-child, &:last-child {
+			border: solid 0 $orange;
 			border-bottom-width: 5px;
 		}
 		
-		&:last-child, &:nth-child(2) {
-			border: solid 0 $orange;
+		&:nth-child(4), &:nth-child(2) {
+			border: solid 0 $green;
 			border-bottom-width: 5px;
 		}
 		

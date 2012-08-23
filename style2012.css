@@ -15,7 +15,7 @@ h1 {
 
 a.nav {
   display: block;
-  color: black;
+  color: #2e2e2e;
   font-family: 'Riesling';
   font-size: 48px;
   text-align: center;
@@ -25,11 +25,18 @@ a.nav {
     color: #d47820; }
 
 a.sub {
-  color: #58575c;
+  color: #2e2e2e;
   display: block;
+  font-family: arial;
   text-align: right;
-  font-size: 12px;
-  padding-right: 20px; }
+  font-size: 12px; }
+  a.sub:hover {
+    color: #a2c111; }
+  a.sub:after {
+    content: url("assets/styling/slug-dark_grey.png");
+    padding-left: 1px;
+    position: relative;
+    top: 4px; }
 
 body {
   background-color: #58575c;
@@ -52,19 +59,24 @@ ul#front_nav {
     display: block;
     float: left;
     background-repeat: no-repeat;
-    opacity: 0.5; }
+    opacity: 0.5;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease; }
     ul#front_nav li:hover {
-      -webkit-transition: all 3s ease;
-      -moz-transition: all 3s ease;
-      -ms-transition: all 3s ease;
-      -o-transition: all 3s ease;
-      transition: all 3s ease;
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      transition: all 2s ease;
       opacity: 1; }
-    ul#front_nav li:first-child, ul#front_nav li:nth-child(4) {
-      border: solid 0 #a2c111;
-      border-bottom-width: 5px; }
-    ul#front_nav li:last-child, ul#front_nav li:nth-child(2) {
+    ul#front_nav li:first-child, ul#front_nav li:last-child {
       border: solid 0 #d47820;
+      border-bottom-width: 5px; }
+    ul#front_nav li:nth-child(4), ul#front_nav li:nth-child(2) {
+      border: solid 0 #a2c111;
       border-bottom-width: 5px; }
     ul#front_nav li#blog {
       background-image: url("assets/images/front-blog.png"); }
