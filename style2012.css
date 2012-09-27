@@ -13,6 +13,21 @@ h1 {
   font-weight: normal;
   margin: 0; }
 
+h2 {
+  font-family: Georgia;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 30px;
+  margin-bottom: 0;
+  padding-left: 16px;
+  letter-spacing: 2px; }
+
+h3 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  padding-left: 20px; }
+
 a.nav {
   display: block;
   color: #2e2e2e;
@@ -38,6 +53,21 @@ a.sub {
     position: relative;
     top: 4px; }
 
+a.subtext {
+  color: #a2c111;
+  display: block;
+  font-family: arial;
+  font-size: 12px;
+  padding-left: 36px;
+  margin-top: -7px; }
+  a.subtext:hover {
+    color: #d47820; }
+  a.subtext:after {
+    content: url("assets/styling/slug-green.png");
+    padding-left: 1px;
+    position: relative;
+    top: 4px; }
+
 body {
   background-color: #58575c;
   background-image: url("assets/styling/bg-dark.jpg");
@@ -53,13 +83,13 @@ ul#front_nav {
   padding: 0;
   margin-top: -45px; }
   ul#front_nav li {
-    width: 180px;
     height: 600px;
+    opacity: 0.5;
+    width: 180px;
     margin: 5px;
     display: block;
     float: left;
     background-repeat: no-repeat;
-    opacity: 0.5;
     -webkit-transition: all 2s ease;
     -moz-transition: all 2s ease;
     -ms-transition: all 2s ease;
@@ -90,3 +120,109 @@ ul#front_nav {
       background-image: url("assets/images/front-code.png"); }
     ul#front_nav li#about {
       background-image: url("assets/images/front-about.png"); }
+
+nav {
+  clear: both; }
+  nav ul {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 960px; }
+    nav ul li {
+      height: 80px;
+      width: 180px;
+      margin: 5px;
+      display: block;
+      float: left;
+      background-repeat: no-repeat;
+      background-color: rgba(255, 255, 255, 0.7);
+      margin-top: 0; }
+      nav ul li:first-child, nav ul li:last-child {
+        border: solid 0 #d47820;
+        border-bottom-width: 5px; }
+      nav ul li:nth-child(4), nav ul li:nth-child(2) {
+        border: solid 0 #a2c111;
+        border-bottom-width: 5px; }
+      nav ul li a.nav {
+        padding-top: 10px; }
+      nav ul li#center {
+        background-color: transparent;
+        border: none;
+        background: url(assets/styling/circle.png) -14px -100px; }
+
+img.portrait {
+  width: 300px;
+  height: auto;
+  float: left;
+  margin: 5px; }
+
+.textblock {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: solid 0 #d47820;
+  border-top-width: 3px;
+  border-bottom-width: 3px;
+  display: inline-table;
+  margin: 5px;
+  padding-bottom: 20px; }
+  .textblock#about {
+    width: 630px; }
+  .textblock#skills {
+    width: 98%; }
+  .textblock p {
+    padding-left: 36px;
+    font-size: 16px;
+    font-family: arial;
+    letter-spacing: 1px;
+    padding-right: 69px; }
+  .textblock .vertical-or {
+    float: left; }
+  .textblock .contact {
+    width: 48%;
+    float: left;
+    text-align: center;
+    padding-top: 15px; }
+    .textblock .contact#emailme {
+      padding-top: 87px; }
+    .textblock .contact a {
+      font-family: Georgia;
+      font-size: 24px;
+      font-weight: normal;
+      letter-spacing: 2px;
+      color: #a2c111; }
+    .textblock .contact input, .textblock .contact textarea {
+      width: 240px;
+      letter-spacing: 1px;
+      font-weight: lighter;
+      margin: 3px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 7px; }
+    .textblock .contact textarea {
+      width: 243px;
+      height: 8em; }
+    .textblock .contact input[type="submit"] {
+      width: 155px;
+      margin-right: -100px;
+      background-color: #a2c111;
+      border-color: #a2c111;
+      letter-spacing: 0; }
+
+ul.skills {
+  list-style: none;
+  display: table; }
+  ul.skills li {
+    float: left;
+    width: 49px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    margin-left: 5px;
+    overflow: hidden; }
+    ul.skills li.skill-half {
+      background: url(assets/styling/skill.png) -96px 0; }
+    ul.skills li.skill-threequarter {
+      background: url(assets/styling/skill.png) -48px 0; }
+    ul.skills li.skill-full {
+      background: url(assets/styling/skill.png) 0 0; }
+    ul.skills li img {
+      margin-top: 7px;
+      overflow: hidden; }
