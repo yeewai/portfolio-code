@@ -123,6 +123,7 @@ body {
 	background-image: url('assets/styling/bg-dark.jpg');
 	background-position-x: center;
 	background-repeat: no-repeat;
+	background-attachment:fixed;
 }
 
 .content {
@@ -331,5 +332,41 @@ ul.skills {
     height: auto;
     margin: 5px;
   }
+}
+
+ul.allitems {
+  margin: 0;
+  padding: 0;
   
+  li {
+    float: left;
+    width: 310px;
+    margin: 10px;
+    
+    span.caption {
+      position: relative;
+      left: -20px;
+      width: 300px;
+      top: -40px;
+      text-align: right;
+      display: inline-block;
+      
+      a {
+        color: $green;
+        background-color: $trans_white;
+        padding: 7px;
+        
+      	&:hover {
+      		color: $orange;
+      	}
+
+      	&:after {
+      		content: url('assets/styling/slug-green.png');
+      		padding-left: 1px;
+      		position: relative;
+      		top: 4px;
+      	}
+      }
+    }
+  }
 }
