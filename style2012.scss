@@ -91,6 +91,13 @@ a.sub {
 	}
 }
 
+.subtext {
+  display: block;
+	font-family: arial;
+	font-size: 12px;
+	padding-left: 36px;
+	margin-top: -7px;
+}
 a.subtext {
 	color: $green;
 	display: block;
@@ -224,6 +231,7 @@ img.portrait {
 	
 	&#about { width: 630px; }
 	&#skills {width: 98%; }
+	&#itemdetails {width: 380px;}
 	
 	p {
 		padding-left: 36px;
@@ -231,6 +239,11 @@ img.portrait {
 		font-family: arial;
 		letter-spacing: 1px;
 		padding-right: 69px;
+		
+		&.tools {
+		  font-style: italic;
+      font-size: 14px;
+		}
 	}
 	
 	.vertical-or {
@@ -307,4 +320,16 @@ ul.skills {
       overflow: hidden;
     }
   }
+}
+
+.item_images {
+  float: left;
+  width: 560px;
+  
+  img {
+    width: 550px;
+    height: auto;
+    margin: 5px;
+  }
+  
 }

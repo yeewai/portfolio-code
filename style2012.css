@@ -53,6 +53,13 @@ a.sub {
     position: relative;
     top: 4px; }
 
+.subtext {
+  display: block;
+  font-family: arial;
+  font-size: 12px;
+  padding-left: 36px;
+  margin-top: -7px; }
+
 a.subtext {
   color: #a2c111;
   display: block;
@@ -168,6 +175,8 @@ img.portrait {
     width: 630px; }
   .textblock#skills {
     width: 98%; }
+  .textblock#itemdetails {
+    width: 380px; }
   .textblock p {
     padding-left: 36px;
     font-size: 16px;
@@ -226,3 +235,11 @@ ul.skills {
     ul.skills li img {
       margin-top: 7px;
       overflow: hidden; }
+
+.item_images {
+  float: left;
+  width: 560px; }
+  .item_images img {
+    width: 550px;
+    height: auto;
+    margin: 5px; }
