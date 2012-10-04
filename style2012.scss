@@ -130,13 +130,13 @@ ul#front_nav {
 	
 	li {
 		height: 600px;
-		opacity: 0.5;
+		opacity: 0.3;
 		@include nav_li;
 		@include fade;
 		
 		&:hover {
 			@include fade;
-			opacity: 1;
+			opacity: 0.9;
 		}
 		
 		&:first-child, &:last-child {
@@ -200,7 +200,7 @@ nav {
 			&#center {
 			  background-color: transparent;
 			  border: none;
-			  background-image: url(assets/styling/insignia.png)
+			  background: url(assets/styling/circle.png) -14px -100px;
 			}
 		}
 	}
