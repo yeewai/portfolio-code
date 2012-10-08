@@ -79,7 +79,8 @@ body {
   background-color: #58575c;
   background-image: url("assets/styling/bg-dark.jpg");
   background-position-x: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
 .content {
   width: 960px;
@@ -186,6 +187,8 @@ img.portrait {
     .textblock p.tools {
       font-style: italic;
       font-size: 14px; }
+    .textblock p a {
+      word-break: break-all; }
   .textblock .vertical-or {
     float: left; }
   .textblock .contact {
@@ -243,17 +246,21 @@ ul.skills {
   float: left;
   width: 560px; }
   .item_images img {
-    width: 550px;
+    max-width: 550px;
     height: auto;
     margin: 5px; }
 
 ul.allitems {
   margin: 0;
   padding: 0; }
+  ul.allitems#centeredlist {
+    text-align: center; }
+    ul.allitems#centeredlist > li {
+      width: 100%; }
   ul.allitems li {
     float: left;
     width: 310px;
-    margin: 10px; }
+    margin: 5px; }
     ul.allitems li span.caption {
       position: relative;
       left: -20px;
@@ -263,7 +270,8 @@ ul.allitems {
       display: inline-block; }
       ul.allitems li span.caption a {
         color: #a2c111;
-        background-color: rgba(255, 255, 255, 0.25); }
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 7px; }
         ul.allitems li span.caption a:hover {
           color: #d47820; }
         ul.allitems li span.caption a:after {
