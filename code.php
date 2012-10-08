@@ -54,7 +54,7 @@ function printItem($item) {
         
         <div class="textblock" id="itemdetails"> 
 			<h2>Other Projects</h2>
-			<ul class="allitems">
+			<ul class="allitems" id="centeredlist">
             	<? listAllItems('code', $id); ?>
             </ul>
 		</div>

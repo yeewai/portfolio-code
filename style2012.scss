@@ -31,6 +31,7 @@ $dark_grey: #2e2e2e;
 $orange: #d47820;
 $green: #a2c111;
 $trans_white: rgba(255, 255, 255, .25);
+$half_white: rgba(255, 255, 255, .5);
 
 h1 {
 	font-family: 'Riesling';
@@ -239,11 +240,15 @@ img.portrait {
 		font-size: 16px;
 		font-family: arial;
 		letter-spacing: 1px;
-		padding-right: 69px;
+		padding-right: 48px;
 		
 		&.tools {
 		  font-style: italic;
       font-size: 14px;
+		}
+		
+		a {
+		  word-break: break-all;
 		}
 	}
 	
@@ -328,7 +333,7 @@ ul.skills {
   width: 560px;
   
   img {
-    width: 550px;
+    max-width: 550px;
     height: auto;
     margin: 5px;
   }
@@ -338,10 +343,15 @@ ul.allitems {
   margin: 0;
   padding: 0;
   
+  &#centeredlist {
+    text-align: center;
+    >li {width: 100%;}
+  }
+  
   li {
     float: left;
     width: 310px;
-    margin: 10px;
+    margin: 5px;
     
     span.caption {
       position: relative;
@@ -353,7 +363,7 @@ ul.allitems {
       
       a {
         color: $green;
-        background-color: $trans_white;
+        background-color: $half_white;
         padding: 7px;
         
       	&:hover {
