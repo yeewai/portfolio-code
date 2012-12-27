@@ -18,11 +18,22 @@
 	return mysql_fetch_assoc($result);
 }
 
-function printItemImages($item_id) {
+function printItemImages($item_id, $admin=false) {
 	$query = 'SELECT * FROM portfolio_images WHERE item_id="'.$item_id.'"';
 	$result = mysql_query($query) or die(mysql_error());
 	while($row = mysql_fetch_assoc($result)) {
-		printLinkedImage($row['url'], $row['alt']);
+		if ($admin) {
+			echo '<li>';
+			printLinkedImage($row['url'], $row['alt']);
+			echo '<form class="admin" name="editin" action="manage.php?action=edit&id='.$_GET['id'].'" method="post" >
+				<input name="id" type="hidden" value="'.$row['id'].'" />
+				<input name="process" type="hidden" value="delete" />
+				<input type="submit" value="Delete Image" />
+			</form>';
+			echo '</li>';
+		}else{
+			printLinkedImage($row['url'], $row['alt']);
+		}
 	}
 }
 
@@ -31,18 +42,22 @@ function printLinkedImage($url, $image_alt, $link ="") {
 	echo "<a href='$link'><img src='$url' alt='$image_alt'></a>";
 }
 
-function listAllItems($category, $exclude_id = "") {
+function listAllItems($category, $exclude_id = "", $admin = false) {
 	$query = 'SELECT * FROM portfolio_items WHERE category="'.$category.'"';
 	if ($exclude_id) {$query .= ' AND id != "'.$exclude_id.'"'; }
 	$result = mysql_query($query) or die(mysql_error());
 	while($row = mysql_fetch_assoc($result)) {
-		printItem($row);
+		printItem($row, $admin);
 	}
 }
 
-function printItem($item) {
+function printItem($item, $admin = false) {
 	echo '<li>';
+		if ($admin) {
+			printLinkedImage($item['thumbnail'], $item['alt'], 'manage.php?action=edit&id='.$item['id']);
+		} else {
 			printLinkedImage($item['thumbnail'], $item['alt'], $item['category'].'.php?id='.$item['id']);
+		}
 	echo '	<span class="caption"><a href="code.php?id='.$item['id'].'">'.$item['title'].'</a></span>
 		  </li>';
 }

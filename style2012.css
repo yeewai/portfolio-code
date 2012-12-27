@@ -174,10 +174,14 @@ img.portrait {
   padding-bottom: 20px; }
   .textblock#about {
     width: 630px; }
-  .textblock#skills {
+  .textblock#skills, .textblock#admin {
     width: 98%; }
   .textblock#itemdetails {
     width: 380px; }
+  .textblock #editing img {
+    height: 300px;
+    padding: 15px;
+    padding-bottom: 5px; }
   .textblock p {
     padding-left: 36px;
     font-size: 16px;
@@ -191,6 +195,23 @@ img.portrait {
       word-break: break-all; }
   .textblock .vertical-or {
     float: left; }
+  .textblock form.admin {
+    padding: 10px; }
+    .textblock form.admin input[type="text"], .textblock form.admin textarea {
+      width: 80%;
+      letter-spacing: 1px;
+      font-weight: lighter;
+      margin: 3px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 7px; }
+    .textblock form.admin textarea {
+      height: 250px; }
+    .textblock form.admin input[type="submit"] {
+      width: 155px;
+      margin-right: -100px;
+      background-color: #a2c111;
+      border-color: #a2c111;
+      letter-spacing: 0; }
   .textblock .contact {
     width: 48%;
     float: left;

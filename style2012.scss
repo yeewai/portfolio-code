@@ -232,8 +232,16 @@ img.portrait {
 	padding-bottom: 20px;
 	
 	&#about { width: 630px; }
-	&#skills {width: 98%; }
+	&#skills, &#admin {width: 98%; }
 	&#itemdetails {width: 380px;}
+	
+	#editing {
+	  img {
+	    height: 300px;
+      padding: 15px;
+      padding-bottom: 5px;
+	  }
+	}
 	
 	p {
 		padding-left: 36px;
@@ -258,6 +266,27 @@ img.portrait {
 	
 	form.admin {
 	  padding: 10px;
+	  
+	  input[type="text"], textarea {
+		  width: 80%;
+		  letter-spacing: 1px;
+      font-weight: lighter;
+      margin: 3px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 7px;
+		}
+		
+		textarea {
+		  height: 250px;
+		}
+		
+		input[type="submit"]{
+		  width: 155px;
+      margin-right: -100px;
+      background-color: $green;
+      border-color: $green;
+      letter-spacing: 0;
+		}
 	}
 	
 	.contact {
