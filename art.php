@@ -10,6 +10,7 @@
 			<h2><? echo $item['title']; ?></h2>
 			<span class="subtext">Date completed: <?  echo $item['date']; ?> <br />
             Media <?  echo $item['tools']; ?></span>
+            <? if ($item['link']) { echo '<a href="'.$item['link'].'" class="subtext">View Video</a>  '; } ?>
 			<p><?  echo $item['description']; ?></p>
 		</div>
         

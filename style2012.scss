@@ -32,6 +32,7 @@ $orange: #d47820;
 $green: #a2c111;
 $trans_white: rgba(255, 255, 255, .25);
 $half_white: rgba(255, 255, 255, .5);
+$most_white: rgba(255, 255, 255, .9);
 
 h1 {
 	font-family: 'Riesling';
@@ -388,7 +389,6 @@ ul.allitems {
     
     span.caption {
       position: relative;
-      left: -20px;
       width: 300px;
       top: -40px;
       text-align: right;
@@ -396,7 +396,7 @@ ul.allitems {
       
       a {
         color: $green;
-        background-color: $half_white;
+        background-color: $most_white;
         padding: 7px;
         
       	&:hover {

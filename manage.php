@@ -193,10 +193,15 @@ if ($_SESSION['adminpw'] == $admin_pw || md5($_POST['pw']) == $admin_pw) {
 		if ($_POST['process']) {echo generateAdminBackLink("edit", $_GET['id']).'or ';}
 		echo generateAdminBackLink();
 		break;
+		case "logout":
+			session_destroy();
+			echo "You've been logged out.";
+		break;
 		default:
 			?>
 			<h2>What do you want to do?</h2>
             <p> <a href="manage.php?action=new">Create a new item</a></p>
+            <p> <a href="manage.php?action=logout">Logout?</a></p>
             <p>Edit existing items?</p>
 			<?
 			echo '<ul class="allitems">';

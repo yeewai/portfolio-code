@@ -45,6 +45,7 @@ function printLinkedImage($url, $image_alt, $link ="") {
 function listAllItems($category, $exclude_id = "", $admin = false) {
 	$query = 'SELECT * FROM portfolio_items WHERE category="'.$category.'"';
 	if ($exclude_id) {$query .= ' AND id != "'.$exclude_id.'"'; }
+	$query .= ' ORDER BY date DESC';
 	$result = mysql_query($query) or die(mysql_error());
 	while($row = mysql_fetch_assoc($result)) {
 		printItem($row, $admin);

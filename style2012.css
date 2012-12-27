@@ -284,14 +284,13 @@ ul.allitems {
     margin: 5px; }
     ul.allitems li span.caption {
       position: relative;
-      left: -20px;
       width: 300px;
       top: -40px;
       text-align: right;
       display: inline-block; }
       ul.allitems li span.caption a {
         color: #a2c111;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.9);
         padding: 7px; }
         ul.allitems li span.caption a:hover {
           color: #d47820; }
