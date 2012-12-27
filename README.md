@@ -8,7 +8,9 @@ It has a password protected admin interface to upload, categorize, add descripti
 
 ###config.php Setup
 The site requires db setup and an admin password to run. The config.php file should look something like:
+
     $link = mysql_connect("localhost", "USERNAME","PASSWORD") or die(mysql_error());
     @mysql_select_db("DATABASENAME",$link) or die(mysql_error());
     $admin_pw = 'md5(PASSWORD)';
+
 The password does have to be an md5 hash because that's what it uses. 
